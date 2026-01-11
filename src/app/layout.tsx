@@ -1,14 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Comic_Neue, LXGW_WenKai_Mono_TC } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const comicNeue = Comic_Neue({
+  variable: "--font-comic-neue",
+  weight: "700",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const lxgwWenKaiMono = LXGW_WenKai_Mono_TC({
+  variable: "--font-lxgw-wenkai-mono",
+  weight: "700",
   subsets: ["latin"],
 });
 
@@ -25,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${comicNeue.variable} ${lxgwWenKaiMono.variable} antialiased`}
       >
         {children}
       </body>
